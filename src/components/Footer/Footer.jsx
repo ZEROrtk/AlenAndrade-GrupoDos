@@ -20,7 +20,7 @@ const Footer = () => {
             <p>+56999775781</p>
             </a>
             <a >
-            <p>rtkam13@gmail.com</p>
+            <p>alennicolas.andrade@alumnos.ulagos.cl</p>
             </a>
             
           </div>
