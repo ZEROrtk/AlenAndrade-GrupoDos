@@ -8,24 +8,23 @@ export default function Cart() {
 
     if (cart.length === 0) {
         return (
-            <div className="container mx-auto max-w-[1170px] py-[50px]">
-                <h1 className="text-[30px] font-medium">Carrito vacío</h1>
-                <p>Agregar productos al carrito para comenzar a comprar.</p>
+            <div className="container mx-auto max-w-[500px] py-[150px]">
+                <h1 className="text-[35px] text-center font-medium">Carrito vacío</h1>
+                <p className="text-center text-[20px]">Agregar productos al carrito para comenzar a comprar.</p>
             </div>
         );
     }
-
     return (
-        <div className="container mx-auto max-w-[1170px] py-[50px]">
-            <h1 className="text-[30px] font-medium mb-[20px]">Carrito de compras</h1>
-            <table className="w-full border-collapse border border-gray-300 text-left">
+        <div className="container mx-auto py-[60px]">
+            <h1 className="text-[40px] ">Carrito de compras</h1>
+            <table className="w-full  text-center">
                 <thead>
                     <tr>
-                        <th className="border border-gray-300 p-[10px]">Producto(s)</th>
-                        <th className="border border-gray-300 p-[10px]">Cantidad</th>
-                        <th className="border border-gray-300 p-[10px]">Precio por unidad</th>
-                        <th className="border border-gray-300 p-[10px]">Total</th>
-                        <th className="border border-gray-300 p-[10px]">Eliminar</th>
+                        <th className="border border-black p-[18px]">Producto(s)</th>
+                        <th className="border border-black p-[18px]">Cantidad</th>
+                        <th className="border border-black p-[18px]">Precio por unidad</th>
+                        <th className="border border-black p-[18px]">Total</th>
+                        <th className="border border-black p-[18px]">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,31 +35,23 @@ export default function Cart() {
 
                         return (
                             <tr key={item.id}>
-                                <td className="border border-gray-300 p-[10px]">{item.name}</td>
-                                <td className="border border-gray-300 p-[10px]">{quantity}</td>
-                                <td className="border border-gray-300 p-[10px]">${price.toFixed(2)}</td>
-                                <td className="border border-gray-300 p-[10px]">${total.toFixed(2)}</td>
-                                <td className="border border-gray-300 p-[10px]">
-                                    <button
-                                        onClick={() => removeFromCart(item.id)}
-                                        className="bg-red-500 text-white px-[10px] py-[5px] rounded hover:bg-red-600"
-                                    >
-                                        Eliminar Productos
-                                    </button>
+                                <td className="border border-black p-[18px]">{item.name}</td>
+                                <td className="border border-black">{quantity}</td>
+                                <td className="border border-black">${price.toFixed(2)}</td>
+                                <td className="border border-black">${total.toFixed(2)}</td>
+                                <td className="border border-black">
+                                    <button onClick={() => removeFromCart(item.id)} className="bg-red-500 text-white px-[10px] py-[5px] rounded hover:bg-red-600"> Eliminar Productos</button>
                                 </td>
                             </tr>
                         );
-                    })}
+                    }
+                     )
+                      }
                 </tbody>
             </table>
             <div className="mt-[20px]">
-                <button
-                    onClick={clearCart}
-                    className="bg-gray-800 text-white px-[20px] py-[10px] rounded hover:bg-gray-900"
-                >
-                    Vaciar Carrito
-                </button>
+                <button onClick={clearCart} className="bg-gray-800 text-white px-[20px] py-[10px] rounded hover:bg-gray-900" >Vaciar Carrito</button>
             </div>
-        </div>
+             </div>
     );
 }

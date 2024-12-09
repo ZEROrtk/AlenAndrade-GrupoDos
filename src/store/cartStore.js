@@ -14,9 +14,7 @@ export const useCartStore = create((set) => ({
                     ),
                 };
             }
-
             const price = parseFloat(product.price);
-
             return {
                 cart: [...state.cart, { ...product, price, quantity }],
             };
@@ -25,7 +23,11 @@ export const useCartStore = create((set) => ({
     removeFromCart: (productId) => {
         set((state) => ({
             cart: state.cart.filter(item => item.id !== productId),
-        }));
+        }
+             )
+                 );
     },
     clearCart: () => set({ cart: [] }),
-}));
+}
+    )
+        );

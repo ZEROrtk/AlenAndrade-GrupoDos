@@ -55,7 +55,7 @@ const Navbar = () => {
                     <li className=" hover:text-green-400 transition cursor-pointer">Contact</li>
                     </Link>
                     <Link spy={true} smooth={true} to="/Cart">
-                    <li className=" hover:text-green-400 transition cursor-pointer"><CiShoppingCart /></li>
+                    <li className=" hover:text-green-400 transition cursor-pointer "><CiShoppingCart /></li>
                     </Link>
                 </ul>
                 </div>
