@@ -33,7 +33,7 @@ export const products = [
         name: 'PlayStation 3',
         price: 140,
         despcription: 'PlayStation 3',
-        stock: 5,
+        stock: 20,
         img: 'https://media.game.es/COVERV2/3D_L/070/070795.png',
         category: 'Sony'
     },
