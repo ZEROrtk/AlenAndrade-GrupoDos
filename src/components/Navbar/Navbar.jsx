@@ -8,7 +8,7 @@ const Navbar = () => {
     const[click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
    const content = <>
-    <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-yellow-20 transition">
+    <div className="font-['Open_Sans']  lg:hidden block absolute top-16 w-full left-0 right-0 bg-yellow-20 transition">
         <ul className="text-center text-x1 p-20"> 
             <Link spy={true} smooth={true} to="/">
                 <li className=" my-4 py-4 border-b border-zinc-50 hover:bg-orange-300 hover:rounded cursor-pointer bg-yellow-200">Home</li>
@@ -30,7 +30,7 @@ const Navbar = () => {
    </>
   return (
     <nav>
-        <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-20 py-4 bg-yellow-200">
+        <div className=" font-['Open_Sans'] h-10vh flex justify-between z-50 text-black lg:py-5 px-20 py-4 bg-yellow-200">
        
             <div className="flex items-center flex-1">
               <a className="logo">

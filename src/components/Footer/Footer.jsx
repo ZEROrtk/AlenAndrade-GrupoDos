@@ -4,10 +4,10 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import logo from '../Logo/logoz.png'
-
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer font-['Open_Sans']">
       <div className="sb__footer section__padding">
         <div className="sb__footer-links"> 
           <div className="sb__footer-links-div">
@@ -28,12 +28,12 @@ const Footer = () => {
           
           <div className="sb__footer-links_div">
               <h4>Companañía</h4>
-              <a >
-              <p>Acerca de nosotros</p>
+              <a > 
+            <Link spy={true} smooth={true} to="About"><p>Acerca de nosotros</p></Link>
               </a>
               
               <a >
-              <p>Carrera</p>
+              <Link spy={true} smooth={true} to="Contact"><p>Contacto</p></Link>
               </a>
              
           </div>

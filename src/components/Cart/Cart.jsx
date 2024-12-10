@@ -8,14 +8,14 @@ export default function Cart() {
 
     if (cart.length === 0) {
         return (
-            <div className="container mx-auto max-w-[500px] py-[150px]">
+            <div className="container mx-auto max-w-[500px] py-[150px] font-['Open_Sans']">
                 <h1 className="text-[35px] text-center font-medium">Carrito vacío</h1>
                 <p className="text-center text-[20px]">Agregar productos al carrito para comenzar a comprar.</p>
             </div>
         );
     }
     return (
-        <div className="container mx-auto py-[60px]">
+        <div className="container mx-auto py-[60px] font-['Open_Sans'] ">
             <h1 className="text-[40px] ">Carrito de compras</h1>
             <table className="w-full  text-center">
                 <thead>
@@ -24,7 +24,6 @@ export default function Cart() {
                         <th className="border border-black p-[18px]">Cantidad</th>
                         <th className="border border-black p-[18px]">Precio por unidad</th>
                         <th className="border border-black p-[18px]">Total</th>
-                        <th className="border border-black p-[18px]">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +38,7 @@ export default function Cart() {
                                 <td className="border border-black">{quantity}</td>
                                 <td className="border border-black">${price.toFixed(2)}</td>
                                 <td className="border border-black">${total.toFixed(2)}</td>
-                                <td className="border border-black">
+                                <td>
                                     <button onClick={() => removeFromCart(item.id)} className="bg-red-500 text-white px-[10px] py-[5px] rounded hover:bg-red-600"> Eliminar Productos</button>
                                 </td>
                             </tr>
